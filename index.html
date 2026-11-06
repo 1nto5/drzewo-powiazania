@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pl" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1e1e2e">
+<title>Powiązania — trzy drzewa</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/jetbrains-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/jetbrains-mono-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+<script>
+  (function () {
+    var t;
+    try { t = localStorage.getItem("aa_theme"); } catch (e) {}
+    if (t !== "light" && t !== "dark") t = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+    document.documentElement.dataset.theme = t;
+    document.querySelector('meta[name="theme-color"]').content = t === "light" ? "#eff1f5" : "#1e1e2e";
+  })();
+</script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="powiazania">
+<div class="wrap">
+<header class="top"><a href="./"><span class="brand-host">adrianantosiak.pl/</span>drzewo-powiazania</a>
+  <span class="top-btns"><button class="toggle" id="theme" type="button" aria-label="Zmień motyw">[ motyw ]</button></span></header>
+<main id="main">
+<section class="page-h">
+  <h1>Powiązania<span class="dot">.</span></h1>
+  <p class="lead">Miejsca i losy, w których spotykają się rodziny z trzech osobnych drzew: Antosiaków z Połoni, Domianów i Myślaków oraz Paców z Pełt. Każde powiązanie ma oznaczenie i źródło. Wspólne miejsce albo podobny los nie oznacza pokrewieństwa.</p>
+</section>
+<div class="legend small muted" aria-label="Legenda" style="margin-bottom:16px">
+  <span><i class="mark ok"></i>pewne</span> · <span><i class="mark prawd"></i>prawdopodobne</span> · <span><i class="mark hyp"></i>hipoteza</span> · <span>zbieżność = to samo miejsce lub czas, bez pokrewieństwa</span>
+</div>
+<ul class="cards">
+  <li class="card">
+    <div class="card-kind"><span class="k">zbieżność</span><span class="badge"><i class="mark prawd" aria-hidden="true"></i>prawdopodobne</span><span>1925</span><span>Domianowie · Pacowie</span></div>
+    <h3>Dwie rodziny, jedna kurpiowska wieś</h3>
+    <p>Z Pełt w parafii Myszyniec pochodziła (prawdopodobnie) Anna Wróblewska, która w 1925 r. wyszła w Myszyńcu za Stanisława Domiana. Z tych samych Pełt pochodzi rodzina Paców: w latach 1902–1909 nazwisko Pac pojawia się tam w kilkudziesięciu aktach urodzeń, a w 1925 r. urodził się tam Józef Pac. Losy obu rodzin są zaskakująco podobne: syn Anny, Stanisław Domian, i Józef Pac, obaj z rocznika 1925/1926, od 1940 r. jako nastolatkowie pracowali przymusowo w gospodarstwach w powiecie szczycieńskim, a po wojnie osiedlili się pod Szczytnem. O pokrewieństwie tych rodzin nic nie wiemy.</p>
+    <div class="src"><a href="https://geneteka.genealodzy.pl/" target="_blank" rel="noopener">Geneteka — indeks ślubów Myszyniec 1925, akt 103 ↗</a> <a href="https://straty.pl/szukaj-osoby.php" target="_blank" rel="noopener">straty.pl — represjonowani 1939–1945 ↗</a></div>
+  </li>
+  <li class="card">
+    <div class="card-kind"><span class="k">zbieżność</span><span class="badge"><i class="mark ok" aria-hidden="true"></i>pewne</span><span>1940–1945</span><span>Domianowie · Pacowie</span></div>
+    <h3>Księży Lasek: dzieci z okolic Myszyńca na robotach</h3>
+    <p>W bazie straty.pl jako miejsce pracy przymusowej figuruje Księży Lasek (dawniej Fürstenwalde) w gminie Rozogi, tuż za dawną granicą z Prusami Wschodnimi. Trafiło tam 19 osób, prawie same dzieci i nastolatki z roczników 1922–1929, z Pełt, Surowego, Myszyńca Starego, Świdwiborka, Zalesia i Cyku. Wśród nich byli Józef Pac z Pełt i chłopak o nazwisku Domian ze Świdwiborka, wsi, z której pochodził też (prawdopodobnie) Józef Domian, dziadek Stanisława Domiana. Czy byli krewnymi, nie wiadomo.</p>
+    <div class="src"><a href="https://straty.pl/szukaj-osoby.php" target="_blank" rel="noopener">straty.pl — wyszukiwanie: miejsce Księży Lasek ↗</a> <a href="https://pl.wikipedia.org/wiki/Ksi%C4%99%C5%BCy_Lasek" target="_blank" rel="noopener">Wikipedia — Księży Lasek ↗</a></div>
+  </li>
+</ul>
+</main>
+<footer class="foot"><span>Stan: 6 listopada 2026</span><a href="../">adrianantosiak.pl</a></footer>
+</div>
+<script>
+  document.getElementById("theme").addEventListener("click", function () {
+    var t = document.documentElement.dataset.theme === "light" ? "dark" : "light";
+    document.documentElement.dataset.theme = t;
+    document.querySelector('meta[name="theme-color"]').content = t === "light" ? "#eff1f5" : "#1e1e2e";
+    try { localStorage.setItem("aa_theme", t); } catch (e) {}
+  });
+</script>
+</body>
+</html>
